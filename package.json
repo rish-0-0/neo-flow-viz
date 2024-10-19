@@ -1,0 +1,26 @@
+{
+  "name": "neo-flow-viz",
+  "version": "0.0.0",
+  "description": "React Flow based Neo4j Vizualization Library written in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rish-0-0/neo-flow-viz.git"
+  },
+  "keywords": [
+    "reactflow",
+    "typescript",
+    "neo4j",
+    "graph",
+    "visualization"
+  ],
+  "author": "Rishabh Anand",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/rish-0-0/neo-flow-viz/issues"
+  },
+  "homepage": "https://github.com/rish-0-0/neo-flow-viz#readme"
+}
