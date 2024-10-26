@@ -1,32 +1,31 @@
 import * as React from "react";
-import ELK, { ElkExtendedEdge, ElkNode, LayoutOptions } from "elkjs";
+import ELK from 'elkjs/lib/elk.bundled.js';
+import {LayoutOptions, ElkExtendedEdge, ElkNode} from "elkjs";
 import {
   ColorMode,
   ReactFlow,
   useEdgesState,
   useNodesState,
-  useReactFlow
+  useReactFlow,
+  ReactFlowProvider,
+  addEdge
 } from "@xyflow/react";
 import { reactFlowEdges, reactFlowNodes } from "./utils";
+import '@xyflow/react/dist/style.css';
 
 interface Identity {
   low: number;
   high: number;
 }
 
-type JSONValue = 
-  | string 
-  | number 
-  | boolean 
-  | null 
-  | JSONArray 
-  | JSONObject;
+type JSONValue = string | number | boolean | JSONObject | JSONArray | null;
+
+interface JSONObject {
+  [key: string]: JSONValue | undefined;
+}
 
 interface JSONArray extends Array<JSONValue> {}
 
-interface JSONObject {
-  [key: string]: JSONValue;
-}
 
 export interface Neo4jNode {
   identity: Identity;
@@ -86,7 +85,7 @@ async function getLayoutedElements (nodes: ElkNode[], edges: ElkExtendedEdge[], 
     const layoutedGraph = await elk
       .layout(graph);
     return ({
-      nodes: layoutedGraph?.children?.map((node_1) => ({
+      nodes: layoutedGraph?.children?.map((node_1:ElkNode) => ({
         ...node_1,
         // React Flow expects a position property on the node instead of `x`
         // and `y` fields.
@@ -108,18 +107,23 @@ async function getLayoutedElements (nodes: ElkNode[], edges: ElkExtendedEdge[], 
 interface NeoFlowVizProps {
   query: string;
   response: Neo4jResponse;
-  width: number | undefined;
-  height: number | undefined;
-  colorMode: ColorMode;
+  width?: number | undefined;
+  height?: number | undefined;
+  colorMode?: ColorMode;
 }
 
-function NeoFlowViz ({query, response, width, height, colorMode}: NeoFlowVizProps) {
+function Flow ({width = 1500, height = 800, query, response, colorMode = 'system'}: NeoFlowVizProps) {
   const initialNodes = React.useMemo(() => reactFlowNodes(response, query), [query]);
   const initialEdges = React.useMemo(() => reactFlowEdges(response, query), [query]);
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
   const { fitView } = useReactFlow();
+
+  const onConnect = React.useCallback(
+    (params: any) => setEdges((eds) => addEdge(params, eds)),
+    [],
+  );
 
   const onLayout = React.useCallback(
     ({ direction, useInitialNodes = false }: {direction:string; useInitialNodes?: boolean;}) => {
@@ -143,15 +147,32 @@ function NeoFlowViz ({query, response, width, height, colorMode}: NeoFlowVizProp
   React.useLayoutEffect(() => {
     onLayout({ direction: 'DOWN', useInitialNodes: true });
   }, []);
+
+  React.useEffect(() => {console.log({nodes, edges})});
+
   return (
-    <ReactFlow
-      height={height}
-      width={width}
-      nodes={nodes}
-      edges={edges}
-      colorMode={colorMode}
-      fitView
-    />
+    <div style={{ width: '100vw', height: '100vh' }}>
+      <ReactFlow
+        height={height}
+        width={width}
+        nodes={nodes}
+        edges={edges}
+        onConnect={onConnect}
+        colorMode={colorMode}
+        fitView
+      />
+    </div>
+  );
+}
+
+function NeoFlowViz (props: NeoFlowVizProps) {
+  
+  return (
+    <ReactFlowProvider>
+      <Flow
+        {...props}
+      />
+    </ReactFlowProvider>
   );
 }
 

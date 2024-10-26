@@ -1,0 +1,332 @@
+{
+  "records": [
+    {
+      "keys": [
+        "c",
+        "p",
+        "r",
+        "r1",
+        "s"
+      ],
+      "length": 5,
+      "_fields": [
+        {
+          "identity": {
+            "low": 77,
+            "high": 0
+          },
+          "labels": [
+            "Category"
+          ],
+          "properties": {
+            "description": "Soft drinks, coffees, teas, beers, and ales",
+            "categoryName": "Beverages",
+            "categoryID": "1",
+            "picture": "0x151C2F00020000000D000E0014002100FFFFFFFF4269746D617020496D616765005061696E742E5069637475726500010500000200000007000000504272757368000000000000000000A0290000424D98290000000000005600000028000000AC00000078000000010004000000000000000000880B0000880B0000080000"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:77"
+        },
+        {
+          "identity": {
+            "low": 33,
+            "high": 0
+          },
+          "labels": [
+            "Product"
+          ],
+          "properties": {
+            "unitPrice": 14,
+            "unitsInStock": {
+              "low": 111,
+              "high": 0
+            },
+            "reorderLevel": {
+              "low": 15,
+              "high": 0
+            },
+            "supplierID": "16",
+            "productID": "34",
+            "discontinued": false,
+            "quantityPerUnit": "24 - 12 oz bottles",
+            "productName": "Sasquatch Ale",
+            "categoryID": "1",
+            "unitsOnOrder": {
+              "low": 0,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:33"
+        },
+        {
+          "identity": {
+            "low": 110,
+            "high": 0
+          },
+          "start": {
+            "low": 100,
+            "high": 0
+          },
+          "end": {
+            "low": 33,
+            "high": 0
+          },
+          "type": "SUPPLIES",
+          "properties": {},
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:110",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:100",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:33"
+        },
+        {
+          "identity": {
+            "low": 33,
+            "high": 0
+          },
+          "start": {
+            "low": 33,
+            "high": 0
+          },
+          "end": {
+            "low": 77,
+            "high": 0
+          },
+          "type": "PART_OF",
+          "properties": {},
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:33",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:33",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:77"
+        },
+        {
+          "identity": {
+            "low": 100,
+            "high": 0
+          },
+          "labels": [
+            "Supplier"
+          ],
+          "properties": {
+            "country": "USA",
+            "contactTitle": "Regional Account Rep.",
+            "address": "3400 - 8th Avenue Suite 210",
+            "supplierID": "16",
+            "phone": "(503) 555-9931",
+            "city": "Bend",
+            "contactName": "Cheryl Saylor",
+            "companyName": "Bigfoot Breweries",
+            "postalCode": "97101",
+            "fax": "NULL",
+            "region": "OR",
+            "homePage": "NULL"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:100"
+        }
+      ],
+      "_fieldLookup": {
+        "c": 0,
+        "p": 1,
+        "r": 2,
+        "r1": 3,
+        "s": 4
+      }
+    },
+    {
+      "keys": [
+        "c",
+        "p",
+        "r",
+        "r1",
+        "s"
+      ],
+      "length": 5,
+      "_fields": [
+        {
+          "identity": {
+            "low": 77,
+            "high": 0
+          },
+          "labels": [
+            "Category"
+          ],
+          "properties": {
+            "description": "Soft drinks, coffees, teas, beers, and ales",
+            "categoryName": "Beverages",
+            "categoryID": "1",
+            "picture": "0x151C2F00020000000D000E0014002100FFFFFFFF4269746D617020496D616765005061696E742E5069637475726500010500000200000007000000504272757368000000000000000000A0290000424D98290000000000005600000028000000AC00000078000000010004000000000000000000880B0000880B0000080000"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:77"
+        },
+        {
+          "identity": {
+            "low": 69,
+            "high": 0
+          },
+          "labels": [
+            "Product"
+          ],
+          "properties": {
+            "unitPrice": 15,
+            "unitsInStock": {
+              "low": 15,
+              "high": 0
+            },
+            "reorderLevel": {
+              "low": 30,
+              "high": 0
+            },
+            "supplierID": "7",
+            "productID": "70",
+            "discontinued": false,
+            "quantityPerUnit": "24 - 355 ml bottles",
+            "productName": "Outback Lager",
+            "categoryID": "1",
+            "unitsOnOrder": {
+              "low": 10,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:69"
+        },
+        {
+          "identity": {
+            "low": 146,
+            "high": 0
+          },
+          "start": {
+            "low": 91,
+            "high": 0
+          },
+          "end": {
+            "low": 69,
+            "high": 0
+          },
+          "type": "SUPPLIES",
+          "properties": {},
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:146",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:91",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:69"
+        },
+        {
+          "identity": {
+            "low": 69,
+            "high": 0
+          },
+          "start": {
+            "low": 69,
+            "high": 0
+          },
+          "end": {
+            "low": 77,
+            "high": 0
+          },
+          "type": "PART_OF",
+          "properties": {},
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:69",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:69",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:77"
+        },
+        {
+          "identity": {
+            "low": 91,
+            "high": 0
+          },
+          "labels": [
+            "Supplier"
+          ],
+          "properties": {
+            "country": "3058",
+            "contactTitle": "Ian Devling",
+            "address": "Marketing Manager",
+            "supplierID": "7",
+            "phone": "Australia",
+            "city": "74 Rose St. Moonie Ponds",
+            "contactName": " Ltd.",
+            "companyName": "Pavlova",
+            "postalCode": "Victoria",
+            "fax": "(03) 444-2343",
+            "region": "Melbourne",
+            "homePage": "(03) 444-6588"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:91"
+        }
+      ],
+      "_fieldLookup": {
+        "c": 0,
+        "p": 1,
+        "r": 2,
+        "r1": 3,
+        "s": 4
+      }
+    }
+  ],
+  "summary": {
+    "query": {
+      "text": "match (s:Supplier)-[r:SUPPLIES]->(p:Product)-[r1:PART_OF]->(c:Category) return * LIMIT 2;",
+      "parameters": {}
+    },
+    "queryType": "r",
+    "counters": {
+      "_stats": {
+        "nodesCreated": 0,
+        "nodesDeleted": 0,
+        "relationshipsCreated": 0,
+        "relationshipsDeleted": 0,
+        "propertiesSet": 0,
+        "labelsAdded": 0,
+        "labelsRemoved": 0,
+        "indexesAdded": 0,
+        "indexesRemoved": 0,
+        "constraintsAdded": 0,
+        "constraintsRemoved": 0
+      },
+      "_systemUpdates": 0
+    },
+    "updateStatistics": {
+      "_stats": {
+        "nodesCreated": 0,
+        "nodesDeleted": 0,
+        "relationshipsCreated": 0,
+        "relationshipsDeleted": 0,
+        "propertiesSet": 0,
+        "labelsAdded": 0,
+        "labelsRemoved": 0,
+        "indexesAdded": 0,
+        "indexesRemoved": 0,
+        "constraintsAdded": 0,
+        "constraintsRemoved": 0
+      },
+      "_systemUpdates": 0
+    },
+    "plan": false,
+    "profile": false,
+    "notifications": [],
+    "gqlStatusObjects": [
+      {
+        "gqlStatus": "00000",
+        "statusDescription": "note: successful completion",
+        "diagnosticRecord": {
+          "OPERATION": "",
+          "OPERATION_CODE": "0",
+          "CURRENT_SCHEMA": "/"
+        },
+        "severity": "UNKNOWN",
+        "classification": "UNKNOWN",
+        "isNotification": false
+      }
+    ],
+    "server": {
+      "address": "neo4j:7687",
+      "agent": "Neo4j/5.8.0",
+      "protocolVersion": 5.2
+    },
+    "resultConsumedAfter": {
+      "low": 1,
+      "high": 0
+    },
+    "resultAvailableAfter": {
+      "low": 1,
+      "high": 0
+    },
+    "database": {
+      "name": "neo4j"
+    }
+  }
+}

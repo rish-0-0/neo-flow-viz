@@ -5,6 +5,7 @@ const config: StorybookConfig = {
   addons: [
     "@storybook/addon-onboarding",
     "@storybook/addon-links",
+    '@storybook/addon-console',
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
@@ -12,6 +13,13 @@ const config: StorybookConfig = {
   framework: {
     name: "@storybook/react-vite",
     options: {},
+  },
+  viteFinal: (config) => {
+    config.optimizeDeps = {
+      ...config.optimizeDeps,
+      exclude: [],
+    };
+    return config;
   },
 };
 export default config;

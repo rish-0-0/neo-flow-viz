@@ -69,7 +69,7 @@ export function reactFlowNodes(response: Neo4jResponse, query: string): any[] {
   const resourceMap = getResourceMappingFromQuery(query);
   return response.records.flatMap(record => 
     record._fields.map((node: Neo4jNode, index) => {
-      const _fieldLookup = response.records[index]._fieldLookup;
+      const _fieldLookup = record._fieldLookup;
       const label = retrieveLabel(resourceMap, index, _fieldLookup);
       return ({
         id: hashString(`${node.identity.low}:${node.identity.high}`), // Unique ID based on identity
@@ -77,6 +77,8 @@ export function reactFlowNodes(response: Neo4jResponse, query: string): any[] {
           label,
           properties: node.properties,
         },
+        width: 100,
+        height: 50,
         position: { x: 0, y: 0 }, // Start at default (0,0); positions can be updated later using ELKJS
       });
     })
@@ -90,7 +92,7 @@ export function reactFlowEdges(response: Neo4jResponse, query: string): any[] {
     return record._fields
       .map((node, index) => {
         if (!node.start || !node.end) return null;
-        const _fieldLookup = response.records[index]._fieldLookup;
+        const _fieldLookup = record._fieldLookup;
         const label = retrieveLabel(resourceMap, index, _fieldLookup);
         return {
           id: `edge-${hashString(`${node.start.low}:${node.start.high}`)}-to-${hashString(`${node.end.low}:${node.end.high}`)}`,
