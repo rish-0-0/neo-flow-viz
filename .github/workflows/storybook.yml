@@ -14,13 +14,24 @@ jobs:
 
     - name: Checkout Repo
       uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Install Local Dependencies
+      run: npm install
     
-    - name: Install Dependencies
+    - name: Install Storybook Dependencies
       run: npm run npm-install-storybook
 
-    - id: build-publish
-      name: Publish to GitHub Pages
-      uses: bitovi/github-actions-storybook-to-github-pages@v1.0.0
+    - name: Build Storybook
+      run: npm run build-storybook
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        path: test/storybook/dist
-        build_command: npm run build-storybook
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: test/storybook/dist  # Path to the directory with Storybook static files
+        publish_branch: gh-pages  # Branch to publish to
