@@ -39,7 +39,7 @@ export const NoRelation: Story = {
 
 export const Relationships: Story = {
   args: {
-    query: "MATCH (cust:Customer)-[:PURCHASED]->(:Order)-[o:ORDERS]->(p:Product),(p)-[:PART_OF]->(c:Category {categoryName:\"Produce\"}) RETURN DISTINCT * LIMIT 2;",
+    query: "MATCH (cust:Customer)-[:PURCHASED]->(o1:Order)-[o:ORDERS]->(p:Product),(p)-[:PART_OF]->(c:Category {categoryName:\"Produce\"})RETURN * LIMIT 1;",
     response: typedQueryResponse3,
     direction: "DOWN"
   }

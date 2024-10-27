@@ -68,6 +68,7 @@ function retrieveLabel(resourceMap: {[key: string]: string}, index: number, _fie
 
 export function reactFlowNodes(response: Neo4jResponse, query: string): any[] {
   const resourceMap = getResourceMappingFromQuery(query);
+  console.log("resourceMap", resourceMap);
   const uniqueNodes = new Map(); // To store unique nodes based on ID
 
   response.records.forEach(record => {
