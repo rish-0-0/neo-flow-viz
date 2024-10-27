@@ -2,9 +2,11 @@
   "name": "neo-flow-viz",
   "version": "0.0.0",
   "description": "React Flow based Neo4j Vizualization Library written in TypeScript",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "cd test/storybook && npm run storybook"
+    "test": "cd test/storybook && npm run storybook",
+    "prepublish": "tsc"
   },
   "repository": {
     "type": "git",
