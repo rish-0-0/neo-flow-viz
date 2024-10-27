@@ -8,6 +8,7 @@
   "scripts": {
     "test": "cd test/storybook && npm run storybook",
     "build-storybook": "cd test/storybook && npm run build",
+    "npm-install-storybook": "cd test/storybook && npm install",
     "prepublish": "tsc"
   },
   "repository": {
