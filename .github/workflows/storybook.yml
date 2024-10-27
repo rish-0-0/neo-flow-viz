@@ -33,5 +33,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: test/storybook/dist  # Path to the directory with Storybook static files
+        publish_dir: test/storybook/storybook-static  # Path to the directory with Storybook static files
         publish_branch: gh-pages  # Branch to publish to

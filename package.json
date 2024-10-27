@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "cd test/storybook && npm run storybook",
-    "build-storybook": "cd test/storybook && npm run build",
+    "build-storybook": "cd test/storybook && npm run build-storybook",
     "npm-install-storybook": "cd test/storybook && npm install",
     "prepublish": "tsc"
   },
