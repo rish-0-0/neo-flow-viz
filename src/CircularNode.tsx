@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Handle, Position } from '@xyflow/react';
 import { DEFAULT_NODE_HEIGHT, DEFAULT_NODE_WIDTH } from './const';
 import { darkenColor, getColorFromLabel, getContrastColor } from './utils';

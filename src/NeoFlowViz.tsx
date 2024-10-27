@@ -15,7 +15,7 @@ import {
   Edge,
 } from "@xyflow/react";
 import JSONPretty from "react-json-pretty";
-import { getContrastColor, reactFlowEdges, reactFlowNodes } from "./utils";
+import { reactFlowEdges, reactFlowNodes } from "./utils";
 import CircularNode from "./CircularNode";
 import {DEFAULT_NODE_WIDTH, DEFAULT_NODE_HEIGHT} from "./const";
 import '@xyflow/react/dist/style.css';
@@ -56,13 +56,6 @@ export interface Neo4jResponse {
 }
 
 const elk = new ELK();
-
-interface ELKOptions {
-  'elk.algorithm'?: string;
-  'elk.layered.spacing.nodeNodeBetweenLayers'?: string;
-  'elk.spacing.nodeNode'?: string;
-  'elk.direction'?: string;
-}
 
 const elkOptions: LayoutOptions = {
   'elk.algorithm': 'layered',
@@ -164,14 +157,14 @@ function Flow (
     onEdgeClickFromProps(event, edge);
   }, []);
 
-  const onPaneClick = React.useCallback((event: React.MouseEvent) => {
+  const onPaneClick = React.useCallback(() => {
     setSelectedNode(null);
     setSelectedEdge(null);
   }, [])
 
   const onLayout = React.useCallback(
     ({ direction, useInitialNodes = false }: {direction:string; useInitialNodes?: boolean;}) => {
-      const opts = { 'elk.direction': direction, ...elkOptions };
+      const opts: LayoutOptions = { 'elk.direction': direction, ...elkOptions };
       const ns = useInitialNodes ? initialNodes : nodes;
       const es = useInitialNodes ? initialEdges : edges;
 
