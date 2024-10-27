@@ -1,0 +1,219 @@
+{
+  "records": [
+    {
+      "keys": [
+        "c",
+        "cust",
+        "o",
+        "o1",
+        "p"
+      ],
+      "length": 5,
+      "_fields": [
+        {
+          "identity": {
+            "low": 83,
+            "high": 0
+          },
+          "labels": [
+            "Category"
+          ],
+          "properties": {
+            "description": "Dried fruit and bean curd",
+            "categoryName": "Produce",
+            "picture": "0x151C2F00020000000D000E0014002100FFFFFFFF4269746D617020496D616765005061696E742E5069637475726500010500000200000007000000504272757368000000000000000000A0290000424D98290000000000005600000028000000AC00000078000000010004000000000000000000880B0000880B0000080000",
+            "categoryID": "7"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:83"
+        },
+        {
+          "identity": {
+            "low": 137,
+            "high": 0
+          },
+          "labels": [
+            "Customer"
+          ],
+          "properties": {
+            "country": "Sweden",
+            "contactTitle": "Owner",
+            "address": "Åkergatan 24",
+            "phone": "0695-34 67 21",
+            "city": "Bräcke",
+            "contactName": "Maria Larsson",
+            "companyName": "Folk och fä HB",
+            "postalCode": "S-844 67",
+            "customerID": "FOLKO",
+            "fax": "NULL",
+            "region": "NULL"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:137"
+        },
+        {
+          "identity": {
+            "low": 1825,
+            "high": 0
+          },
+          "start": {
+            "low": 518,
+            "high": 0
+          },
+          "end": {
+            "low": 50,
+            "high": 0
+          },
+          "type": "ORDERS",
+          "properties": {
+            "unitPrice": "53.00",
+            "quantity": {
+              "low": 50,
+              "high": 0
+            },
+            "productID": "51",
+            "orderID": "10561",
+            "discount": "0"
+          },
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:1825",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:518",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:50"
+        },
+        {
+          "identity": {
+            "low": 518,
+            "high": 0
+          },
+          "labels": [
+            "Order"
+          ],
+          "properties": {
+            "shipCity": "Bräcke",
+            "orderID": "10561",
+            "freight": "242.21",
+            "requiredDate": "1997-07-04 00:00:00.000",
+            "employeeID": "2",
+            "shipPostalCode": "S-844 67",
+            "shipName": "Folk och fä HB",
+            "shipCountry": "Sweden",
+            "shipAddress": "Åkergatan 24",
+            "shipVia": "2",
+            "customerID": "FOLKO",
+            "orderDate": "1997-06-06 00:00:00.000",
+            "shipRegion": "NULL",
+            "shippedDate": "1997-06-09 00:00:00.000"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:518"
+        },
+        {
+          "identity": {
+            "low": 50,
+            "high": 0
+          },
+          "labels": [
+            "Product"
+          ],
+          "properties": {
+            "unitPrice": 53,
+            "unitsInStock": {
+              "low": 20,
+              "high": 0
+            },
+            "reorderLevel": {
+              "low": 10,
+              "high": 0
+            },
+            "supplierID": "24",
+            "productID": "51",
+            "discontinued": false,
+            "quantityPerUnit": "50 - 300 g pkgs.",
+            "productName": "Manjimup Dried Apples",
+            "categoryID": "7",
+            "unitsOnOrder": {
+              "low": 0,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:50"
+        }
+      ],
+      "_fieldLookup": {
+        "c": 0,
+        "cust": 1,
+        "o": 2,
+        "o1": 3,
+        "p": 4
+      }
+    }
+  ],
+  "summary": {
+    "query": {
+      "text": "MATCH (cust:Customer)-[:PURCHASED]->(o1:Order)-[o:ORDERS]->(p:Product),(p)-[:PART_OF]->(c:Category {categoryName:\"Produce\"})RETURN * LIMIT 1;",
+      "parameters": {}
+    },
+    "queryType": "r",
+    "counters": {
+      "_stats": {
+        "nodesCreated": 0,
+        "nodesDeleted": 0,
+        "relationshipsCreated": 0,
+        "relationshipsDeleted": 0,
+        "propertiesSet": 0,
+        "labelsAdded": 0,
+        "labelsRemoved": 0,
+        "indexesAdded": 0,
+        "indexesRemoved": 0,
+        "constraintsAdded": 0,
+        "constraintsRemoved": 0
+      },
+      "_systemUpdates": 0
+    },
+    "updateStatistics": {
+      "_stats": {
+        "nodesCreated": 0,
+        "nodesDeleted": 0,
+        "relationshipsCreated": 0,
+        "relationshipsDeleted": 0,
+        "propertiesSet": 0,
+        "labelsAdded": 0,
+        "labelsRemoved": 0,
+        "indexesAdded": 0,
+        "indexesRemoved": 0,
+        "constraintsAdded": 0,
+        "constraintsRemoved": 0
+      },
+      "_systemUpdates": 0
+    },
+    "plan": false,
+    "profile": false,
+    "notifications": [],
+    "gqlStatusObjects": [
+      {
+        "gqlStatus": "00000",
+        "statusDescription": "note: successful completion",
+        "diagnosticRecord": {
+          "OPERATION": "",
+          "OPERATION_CODE": "0",
+          "CURRENT_SCHEMA": "/"
+        },
+        "severity": "UNKNOWN",
+        "classification": "UNKNOWN",
+        "isNotification": false
+      }
+    ],
+    "server": {
+      "address": "neo4j:7687",
+      "agent": "Neo4j/5.8.0",
+      "protocolVersion": 5.2
+    },
+    "resultConsumedAfter": {
+      "low": 0,
+      "high": 0
+    },
+    "resultAvailableAfter": {
+      "low": 8,
+      "high": 0
+    },
+    "database": {
+      "name": "neo4j"
+    }
+  }
+}

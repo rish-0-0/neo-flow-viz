@@ -1,0 +1,341 @@
+{
+  "records": [
+    {
+      "keys": [
+        "c",
+        "s"
+      ],
+      "length": 2,
+      "_fields": [
+        {
+          "identity": {
+            "low": 83,
+            "high": 0
+          },
+          "labels": [
+            "Category"
+          ],
+          "properties": {
+            "description": "Dried fruit and bean curd",
+            "categoryName": "Produce",
+            "picture": "0x151C2F00020000000D000E0014002100FFFFFFFF4269746D617020496D616765005061696E742E5069637475726500010500000200000007000000504272757368000000000000000000A0290000424D98290000000000005600000028000000AC00000078000000010004000000000000000000880B0000880B0000080000",
+            "categoryID": "7"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:83"
+        },
+        {
+          "identity": {
+            "low": 108,
+            "high": 0
+          },
+          "labels": [
+            "Supplier"
+          ],
+          "properties": {
+            "country": "2042",
+            "contactTitle": "Wendy Mackenzie",
+            "address": "Sales Representative",
+            "supplierID": "24",
+            "phone": "Australia",
+            "city": "170 Prince Edward Parade Hunter's Hill",
+            "contactName": " Mate",
+            "companyName": "G'day",
+            "postalCode": "NSW",
+            "fax": "(02) 555-5914",
+            "region": "Sydney",
+            "homePage": "(02) 555-4873"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:108"
+        }
+      ],
+      "_fieldLookup": {
+        "c": 0,
+        "s": 1
+      }
+    },
+    {
+      "keys": [
+        "c",
+        "s"
+      ],
+      "length": 2,
+      "_fields": [
+        {
+          "identity": {
+            "low": 83,
+            "high": 0
+          },
+          "labels": [
+            "Category"
+          ],
+          "properties": {
+            "description": "Dried fruit and bean curd",
+            "categoryName": "Produce",
+            "picture": "0x151C2F00020000000D000E0014002100FFFFFFFF4269746D617020496D616765005061696E742E5069637475726500010500000200000007000000504272757368000000000000000000A0290000424D98290000000000005600000028000000AC00000078000000010004000000000000000000880B0000880B0000080000",
+            "categoryID": "7"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:83"
+        },
+        {
+          "identity": {
+            "low": 88,
+            "high": 0
+          },
+          "labels": [
+            "Supplier"
+          ],
+          "properties": {
+            "country": "Japan",
+            "contactTitle": "Marketing Manager",
+            "address": "9-8 Sekimai Musashino-shi",
+            "supplierID": "4",
+            "phone": "(03) 3555-5011",
+            "city": "Tokyo",
+            "contactName": "Yoshi Nagase",
+            "companyName": "Tokyo Traders",
+            "postalCode": "100",
+            "fax": "NULL",
+            "region": "NULL",
+            "homePage": "NULL"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:88"
+        }
+      ],
+      "_fieldLookup": {
+        "c": 0,
+        "s": 1
+      }
+    },
+    {
+      "keys": [
+        "c",
+        "s"
+      ],
+      "length": 2,
+      "_fields": [
+        {
+          "identity": {
+            "low": 83,
+            "high": 0
+          },
+          "labels": [
+            "Category"
+          ],
+          "properties": {
+            "description": "Dried fruit and bean curd",
+            "categoryName": "Produce",
+            "picture": "0x151C2F00020000000D000E0014002100FFFFFFFF4269746D617020496D616765005061696E742E5069637475726500010500000200000007000000504272757368000000000000000000A0290000424D98290000000000005600000028000000AC00000078000000010004000000000000000000880B0000880B0000080000",
+            "categoryID": "7"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:83"
+        },
+        {
+          "identity": {
+            "low": 96,
+            "high": 0
+          },
+          "labels": [
+            "Supplier"
+          ],
+          "properties": {
+            "country": "Germany",
+            "contactTitle": "International Marketing Mgr.",
+            "address": "Bogenallee 51",
+            "supplierID": "12",
+            "city": "Frankfurt",
+            "phone": "(069) 992755",
+            "contactName": "Martin Bein",
+            "companyName": "Plutzer Lebensmittelgroßmärkte AG",
+            "postalCode": "60439",
+            "fax": "NULL",
+            "region": "NULL",
+            "homePage": "Plutzer (on the World Wide Web)#http://www.microsoft.com/accessdev/sampleapps/plutzer.htm#"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:96"
+        }
+      ],
+      "_fieldLookup": {
+        "c": 0,
+        "s": 1
+      }
+    },
+    {
+      "keys": [
+        "c",
+        "s"
+      ],
+      "length": 2,
+      "_fields": [
+        {
+          "identity": {
+            "low": 83,
+            "high": 0
+          },
+          "labels": [
+            "Category"
+          ],
+          "properties": {
+            "description": "Dried fruit and bean curd",
+            "categoryName": "Produce",
+            "picture": "0x151C2F00020000000D000E0014002100FFFFFFFF4269746D617020496D616765005061696E742E5069637475726500010500000200000007000000504272757368000000000000000000A0290000424D98290000000000005600000028000000AC00000078000000010004000000000000000000880B0000880B0000080000",
+            "categoryID": "7"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:83"
+        },
+        {
+          "identity": {
+            "low": 90,
+            "high": 0
+          },
+          "labels": [
+            "Supplier"
+          ],
+          "properties": {
+            "country": "Japan",
+            "contactTitle": "Marketing Representative",
+            "supplierID": "6",
+            "address": "92 Setsuko Chuo-ku",
+            "phone": "(06) 431-7877",
+            "city": "Osaka",
+            "contactName": "Mayumi Ohno",
+            "companyName": "Mayumi's",
+            "postalCode": "545",
+            "fax": "NULL",
+            "region": "NULL",
+            "homePage": "Mayumi's (on the World Wide Web)#http://www.microsoft.com/accessdev/sampleapps/mayumi.htm#"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:90"
+        }
+      ],
+      "_fieldLookup": {
+        "c": 0,
+        "s": 1
+      }
+    },
+    {
+      "keys": [
+        "c",
+        "s"
+      ],
+      "length": 2,
+      "_fields": [
+        {
+          "identity": {
+            "low": 83,
+            "high": 0
+          },
+          "labels": [
+            "Category"
+          ],
+          "properties": {
+            "description": "Dried fruit and bean curd",
+            "categoryName": "Produce",
+            "picture": "0x151C2F00020000000D000E0014002100FFFFFFFF4269746D617020496D616765005061696E742E5069637475726500010500000200000007000000504272757368000000000000000000A0290000424D98290000000000005600000028000000AC00000078000000010004000000000000000000880B0000880B0000080000",
+            "categoryID": "7"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:83"
+        },
+        {
+          "identity": {
+            "low": 87,
+            "high": 0
+          },
+          "labels": [
+            "Supplier"
+          ],
+          "properties": {
+            "country": "USA",
+            "contactTitle": "Sales Representative",
+            "supplierID": "3",
+            "address": "707 Oxford Rd.",
+            "phone": "(313) 555-5735",
+            "city": "Ann Arbor",
+            "contactName": "Regina Murphy",
+            "companyName": "Grandma Kelly's Homestead",
+            "postalCode": "48104",
+            "fax": "(313) 555-3349",
+            "region": "MI",
+            "homePage": "NULL"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:87"
+        }
+      ],
+      "_fieldLookup": {
+        "c": 0,
+        "s": 1
+      }
+    }
+  ],
+  "summary": {
+    "query": {
+      "text": "MATCH (c:Category {categoryName:\"Produce\"})<--(:Product)<--(s:Supplier) RETURN DISTINCT *;",
+      "parameters": {}
+    },
+    "queryType": "r",
+    "counters": {
+      "_stats": {
+        "nodesCreated": 0,
+        "nodesDeleted": 0,
+        "relationshipsCreated": 0,
+        "relationshipsDeleted": 0,
+        "propertiesSet": 0,
+        "labelsAdded": 0,
+        "labelsRemoved": 0,
+        "indexesAdded": 0,
+        "indexesRemoved": 0,
+        "constraintsAdded": 0,
+        "constraintsRemoved": 0
+      },
+      "_systemUpdates": 0
+    },
+    "updateStatistics": {
+      "_stats": {
+        "nodesCreated": 0,
+        "nodesDeleted": 0,
+        "relationshipsCreated": 0,
+        "relationshipsDeleted": 0,
+        "propertiesSet": 0,
+        "labelsAdded": 0,
+        "labelsRemoved": 0,
+        "indexesAdded": 0,
+        "indexesRemoved": 0,
+        "constraintsAdded": 0,
+        "constraintsRemoved": 0
+      },
+      "_systemUpdates": 0
+    },
+    "plan": false,
+    "profile": false,
+    "notifications": [],
+    "gqlStatusObjects": [
+      {
+        "gqlStatus": "00000",
+        "statusDescription": "note: successful completion",
+        "diagnosticRecord": {
+          "OPERATION": "",
+          "OPERATION_CODE": "0",
+          "CURRENT_SCHEMA": "/"
+        },
+        "severity": "UNKNOWN",
+        "classification": "UNKNOWN",
+        "isNotification": false
+      }
+    ],
+    "server": {
+      "address": "neo4j:7687",
+      "agent": "Neo4j/5.8.0",
+      "protocolVersion": 5.2
+    },
+    "resultConsumedAfter": {
+      "low": 1,
+      "high": 0
+    },
+    "resultAvailableAfter": {
+      "low": 9,
+      "high": 0
+    },
+    "database": {
+      "name": "neo4j"
+    }
+  }
+}

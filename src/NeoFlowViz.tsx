@@ -8,10 +8,18 @@ import {
   useNodesState,
   useReactFlow,
   ReactFlowProvider,
-  addEdge
+  addEdge,
+  Controls,
+  Panel,
+  Node,
+  Edge,
 } from "@xyflow/react";
-import { reactFlowEdges, reactFlowNodes } from "./utils";
+import JSONPretty from "react-json-pretty";
+import { getContrastColor, reactFlowEdges, reactFlowNodes } from "./utils";
+import CircularNode from "./CircularNode";
+import {DEFAULT_NODE_WIDTH, DEFAULT_NODE_HEIGHT} from "./const";
 import '@xyflow/react/dist/style.css';
+import 'react-json-pretty/themes/monikai.css';
 
 interface Identity {
   low: number;
@@ -75,8 +83,8 @@ async function getLayoutedElements (nodes: ElkNode[], edges: ElkExtendedEdge[], 
       sourcePosition: isHorizontal ? 'right' : 'bottom',
 
       // Hardcode a width and height for elk to use when layouting.
-      width: 150,
-      height: 50,
+      width: DEFAULT_NODE_WIDTH,
+      height: DEFAULT_NODE_HEIGHT,
     })),
     edges: edges,
   };
@@ -103,20 +111,39 @@ async function getLayoutedElements (nodes: ElkNode[], edges: ElkExtendedEdge[], 
   }
 };
 
-
 interface NeoFlowVizProps {
   query: string;
   response: Neo4jResponse;
   width?: number | undefined;
   height?: number | undefined;
   colorMode?: ColorMode;
+  direction?: 'DOWN' | 'UP' | 'LEFT' | 'RIGHT';
+  onNodeClick?: (event: React.MouseEvent, node: Node) => void;
+  onEdgeClick?: (event: React.MouseEvent, edge: Edge) => void;
+  showDetails?: boolean;
 }
 
-function Flow ({width = 1500, height = 800, query, response, colorMode = 'system'}: NeoFlowVizProps) {
+const nodeTypes = { circularNode: CircularNode };
+
+function Flow (
+  {
+    width = 1500,
+    height = 800,
+    query,
+    response,
+    colorMode = 'system',
+    direction = 'DOWN',
+    onNodeClick: onNodeClickFromProps = () => {},
+    onEdgeClick: onEdgeClickFromProps = () => {},
+    showDetails = true
+  }
+  : NeoFlowVizProps) {
   const initialNodes = React.useMemo(() => reactFlowNodes(response, query), [query]);
   const initialEdges = React.useMemo(() => reactFlowEdges(response, query), [query]);
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [selectedNode, setSelectedNode] = React.useState<Node | null>(null);
+  const [selectedEdge, setSelectedEdge] = React.useState<Edge | null>(null);
 
   const { fitView } = useReactFlow();
 
@@ -124,6 +151,23 @@ function Flow ({width = 1500, height = 800, query, response, colorMode = 'system
     (params: any) => setEdges((eds) => addEdge(params, eds)),
     [],
   );
+
+  const onNodeClick = React.useCallback((event: React.MouseEvent, node: Node) => {
+    setSelectedEdge(null);
+    setSelectedNode(node);
+    onNodeClickFromProps(event, node);
+  }, []);
+
+  const onEdgeClick = React.useCallback((event: React.MouseEvent, edge: Edge) => {
+    setSelectedNode(null);
+    setSelectedEdge(edge);
+    onEdgeClickFromProps(event, edge);
+  }, []);
+
+  const onPaneClick = React.useCallback((event: React.MouseEvent) => {
+    setSelectedNode(null);
+    setSelectedEdge(null);
+  }, [])
 
   const onLayout = React.useCallback(
     ({ direction, useInitialNodes = false }: {direction:string; useInitialNodes?: boolean;}) => {
@@ -145,10 +189,8 @@ function Flow ({width = 1500, height = 800, query, response, colorMode = 'system
 
   // Calculate the initial layout on mount.
   React.useLayoutEffect(() => {
-    onLayout({ direction: 'DOWN', useInitialNodes: true });
+    onLayout({ direction, useInitialNodes: true });
   }, []);
-
-  React.useEffect(() => {console.log({nodes, edges})});
 
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
@@ -157,10 +199,41 @@ function Flow ({width = 1500, height = 800, query, response, colorMode = 'system
         width={width}
         nodes={nodes}
         edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onPaneClick={onPaneClick}
         onConnect={onConnect}
         colorMode={colorMode}
+        onNodeClick={onNodeClick}
+        onEdgeClick={onEdgeClick}
         fitView
-      />
+        nodeTypes={nodeTypes}
+      >
+        {showDetails && (
+          <Panel position="top-right">
+            <div className="react-json-pretty-container" style={{
+              maxWidth: '30vw',
+              height: '100%',
+              padding: '5px 10px'
+            }}>
+
+              {
+                selectedNode && (
+                  <>
+                    <JSONPretty id="neo-flow-viz-json-pretty" data={selectedNode.data} />
+                  </>
+                )
+              }
+              {
+                selectedEdge && (
+                  <JSONPretty id="neo-flow-viz-json-pretty" data={selectedEdge.data} />
+                )
+              }
+            </div>
+          </Panel>
+        )}
+        <Controls />
+      </ReactFlow>
     </div>
   );
 }
