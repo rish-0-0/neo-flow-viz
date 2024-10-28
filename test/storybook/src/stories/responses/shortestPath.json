@@ -1,0 +1,455 @@
+{
+  "records": [
+    {
+      "keys": [
+        "bacon",
+        "meg",
+        "p"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1054,
+            "high": 0
+          },
+          "labels": [
+            "Person"
+          ],
+          "properties": {
+            "born": {
+              "low": 1958,
+              "high": 0
+            },
+            "name": "Kevin Bacon"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1054"
+        },
+        {
+          "identity": {
+            "low": 1069,
+            "high": 0
+          },
+          "labels": [
+            "Person"
+          ],
+          "properties": {
+            "born": {
+              "low": 1961,
+              "high": 0
+            },
+            "name": "Meg Ryan"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1069"
+        },
+        {
+          "start": {
+            "identity": {
+              "low": 1054,
+              "high": 0
+            },
+            "labels": [
+              "Person"
+            ],
+            "properties": {
+              "born": {
+                "low": 1958,
+                "high": 0
+              },
+              "name": "Kevin Bacon"
+            },
+            "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1054"
+          },
+          "end": {
+            "identity": {
+              "low": 1069,
+              "high": 0
+            },
+            "labels": [
+              "Person"
+            ],
+            "properties": {
+              "born": {
+                "low": 1961,
+                "high": 0
+              },
+              "name": "Meg Ryan"
+            },
+            "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1069"
+          },
+          "segments": [
+            {
+              "start": {
+                "identity": {
+                  "low": 1054,
+                  "high": 0
+                },
+                "labels": [
+                  "Person"
+                ],
+                "properties": {
+                  "born": {
+                    "low": 1958,
+                    "high": 0
+                  },
+                  "name": "Kevin Bacon"
+                },
+                "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1054"
+              },
+              "relationship": {
+                "identity": {
+                  "low": 3342,
+                  "high": 0
+                },
+                "start": {
+                  "low": 1054,
+                  "high": 0
+                },
+                "end": {
+                  "low": 1179,
+                  "high": 0
+                },
+                "type": "ACTED_IN",
+                "properties": {
+                  "roles": [
+                    "Jack Swigert"
+                  ]
+                },
+                "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3342",
+                "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1054",
+                "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1179"
+              },
+              "end": {
+                "identity": {
+                  "low": 1179,
+                  "high": 0
+                },
+                "labels": [
+                  "Movie"
+                ],
+                "properties": {
+                  "tagline": "Houston, we have a problem.",
+                  "title": "Apollo 13",
+                  "released": {
+                    "low": 1995,
+                    "high": 0
+                  }
+                },
+                "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1179"
+              }
+            },
+            {
+              "start": {
+                "identity": {
+                  "low": 1179,
+                  "high": 0
+                },
+                "labels": [
+                  "Movie"
+                ],
+                "properties": {
+                  "tagline": "Houston, we have a problem.",
+                  "title": "Apollo 13",
+                  "released": {
+                    "low": 1995,
+                    "high": 0
+                  }
+                },
+                "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1179"
+              },
+              "relationship": {
+                "identity": {
+                  "low": 3341,
+                  "high": 0
+                },
+                "start": {
+                  "low": 1106,
+                  "high": 0
+                },
+                "end": {
+                  "low": 1179,
+                  "high": 0
+                },
+                "type": "ACTED_IN",
+                "properties": {
+                  "roles": [
+                    "Jim Lovell"
+                  ]
+                },
+                "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3341",
+                "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1106",
+                "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1179"
+              },
+              "end": {
+                "identity": {
+                  "low": 1106,
+                  "high": 0
+                },
+                "labels": [
+                  "Person"
+                ],
+                "properties": {
+                  "born": {
+                    "low": 1956,
+                    "high": 0
+                  },
+                  "name": "Tom Hanks"
+                },
+                "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1106"
+              }
+            },
+            {
+              "start": {
+                "identity": {
+                  "low": 1106,
+                  "high": 0
+                },
+                "labels": [
+                  "Person"
+                ],
+                "properties": {
+                  "born": {
+                    "low": 1956,
+                    "high": 0
+                  },
+                  "name": "Tom Hanks"
+                },
+                "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1106"
+              },
+              "relationship": {
+                "identity": {
+                  "low": 3230,
+                  "high": 0
+                },
+                "start": {
+                  "low": 1106,
+                  "high": 0
+                },
+                "end": {
+                  "low": 1108,
+                  "high": 0
+                },
+                "type": "ACTED_IN",
+                "properties": {
+                  "roles": [
+                    "Sam Baldwin"
+                  ]
+                },
+                "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3230",
+                "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1106",
+                "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1108"
+              },
+              "end": {
+                "identity": {
+                  "low": 1108,
+                  "high": 0
+                },
+                "labels": [
+                  "Movie"
+                ],
+                "properties": {
+                  "tagline": "What if someone you never met, someone you never saw, someone you never knew was the only someone for you?",
+                  "title": "Sleepless in Seattle",
+                  "released": {
+                    "low": 1993,
+                    "high": 0
+                  }
+                },
+                "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1108"
+              }
+            },
+            {
+              "start": {
+                "identity": {
+                  "low": 1108,
+                  "high": 0
+                },
+                "labels": [
+                  "Movie"
+                ],
+                "properties": {
+                  "tagline": "What if someone you never met, someone you never saw, someone you never knew was the only someone for you?",
+                  "title": "Sleepless in Seattle",
+                  "released": {
+                    "low": 1993,
+                    "high": 0
+                  }
+                },
+                "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1108"
+              },
+              "relationship": {
+                "identity": {
+                  "low": 3231,
+                  "high": 0
+                },
+                "start": {
+                  "low": 1069,
+                  "high": 0
+                },
+                "end": {
+                  "low": 1108,
+                  "high": 0
+                },
+                "type": "ACTED_IN",
+                "properties": {
+                  "roles": [
+                    "Annie Reed"
+                  ]
+                },
+                "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3231",
+                "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1069",
+                "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1108"
+              },
+              "end": {
+                "identity": {
+                  "low": 1069,
+                  "high": 0
+                },
+                "labels": [
+                  "Person"
+                ],
+                "properties": {
+                  "born": {
+                    "low": 1961,
+                    "high": 0
+                  },
+                  "name": "Meg Ryan"
+                },
+                "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1069"
+              }
+            }
+          ],
+          "length": 4
+        }
+      ],
+      "_fieldLookup": {
+        "bacon": 0,
+        "meg": 1,
+        "p": 2
+      }
+    }
+  ],
+  "summary": {
+    "query": {
+      "text": "MATCH p=shortestPath((bacon:Person {name:\"Kevin Bacon\"})-[*]-(meg:Person {name:\"Meg Ryan\"}))RETURN *",
+      "parameters": {}
+    },
+    "queryType": "r",
+    "counters": {
+      "_stats": {
+        "nodesCreated": 0,
+        "nodesDeleted": 0,
+        "relationshipsCreated": 0,
+        "relationshipsDeleted": 0,
+        "propertiesSet": 0,
+        "labelsAdded": 0,
+        "labelsRemoved": 0,
+        "indexesAdded": 0,
+        "indexesRemoved": 0,
+        "constraintsAdded": 0,
+        "constraintsRemoved": 0
+      },
+      "_systemUpdates": 0
+    },
+    "updateStatistics": {
+      "_stats": {
+        "nodesCreated": 0,
+        "nodesDeleted": 0,
+        "relationshipsCreated": 0,
+        "relationshipsDeleted": 0,
+        "propertiesSet": 0,
+        "labelsAdded": 0,
+        "labelsRemoved": 0,
+        "indexesAdded": 0,
+        "indexesRemoved": 0,
+        "constraintsAdded": 0,
+        "constraintsRemoved": 0
+      },
+      "_systemUpdates": 0
+    },
+    "plan": false,
+    "profile": false,
+    "notifications": [
+      {
+        "code": "Neo.ClientNotification.Statement.UnboundedVariableLengthPattern",
+        "title": "The provided pattern is unbounded, consider adding an upper limit to the number of node hops.",
+        "description": "Using shortest path with an unbounded pattern will likely result in long execution times. It is recommended to use an upper limit to the number of node hops in your pattern.",
+        "severity": "INFORMATION",
+        "position": {
+          "offset": 21,
+          "line": 1,
+          "column": 22
+        },
+        "severityLevel": "INFORMATION",
+        "rawSeverityLevel": "INFORMATION",
+        "category": "PERFORMANCE",
+        "rawCategory": "PERFORMANCE"
+      }
+    ],
+    "gqlStatusObjects": [
+      {
+        "gqlStatus": "00000",
+        "statusDescription": "note: successful completion",
+        "diagnosticRecord": {
+          "OPERATION": "",
+          "OPERATION_CODE": "0",
+          "CURRENT_SCHEMA": "/"
+        },
+        "severity": "UNKNOWN",
+        "classification": "UNKNOWN",
+        "isNotification": false
+      },
+      {
+        "gqlStatus": "03N42",
+        "statusDescription": "Using shortest path with an unbounded pattern will likely result in long execution times. It is recommended to use an upper limit to the number of node hops in your pattern.",
+        "diagnosticRecord": {
+          "OPERATION": "",
+          "OPERATION_CODE": "0",
+          "CURRENT_SCHEMA": "/",
+          "_severity": "INFORMATION",
+          "_classification": "PERFORMANCE",
+          "_position": {
+            "column": {
+              "low": 22,
+              "high": 0
+            },
+            "offset": {
+              "low": 21,
+              "high": 0
+            },
+            "line": {
+              "low": 1,
+              "high": 0
+            }
+          }
+        },
+        "position": {
+          "offset": 21,
+          "line": 1,
+          "column": 22
+        },
+        "severity": "INFORMATION",
+        "rawSeverity": "INFORMATION",
+        "classification": "PERFORMANCE",
+        "rawClassification": "PERFORMANCE",
+        "isNotification": true
+      }
+    ],
+    "server": {
+      "address": "neo4j:7687",
+      "agent": "Neo4j/5.8.0",
+      "protocolVersion": 5.2
+    },
+    "resultConsumedAfter": {
+      "low": 1,
+      "high": 0
+    },
+    "resultAvailableAfter": {
+      "low": 8,
+      "high": 0
+    },
+    "database": {
+      "name": "neo4j"
+    }
+  }
+}

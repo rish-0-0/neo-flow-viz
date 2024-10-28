@@ -1,0 +1,797 @@
+{
+  "records": [
+    {
+      "keys": [
+        "m",
+        "people",
+        "relatedTo"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1140,
+            "high": 0
+          },
+          "labels": [
+            "Movie"
+          ],
+          "properties": {
+            "tagline": "Everything is connected",
+            "title": "Cloud Atlas",
+            "released": {
+              "low": 2012,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        },
+        {
+          "identity": {
+            "low": 1039,
+            "high": 0
+          },
+          "labels": [
+            "Person"
+          ],
+          "properties": {
+            "born": {
+              "low": 1960,
+              "high": 0
+            },
+            "name": "Hugo Weaving"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1039"
+        },
+        {
+          "identity": {
+            "low": 3277,
+            "high": 0
+          },
+          "start": {
+            "low": 1039,
+            "high": 0
+          },
+          "end": {
+            "low": 1140,
+            "high": 0
+          },
+          "type": "ACTED_IN",
+          "properties": {
+            "roles": [
+              "Bill Smoke",
+              "Haskell Moore",
+              "Tadeusz Kesselring",
+              "Nurse Noakes",
+              "Boardman Mephi",
+              "Old Georgie"
+            ]
+          },
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3277",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1039",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        }
+      ],
+      "_fieldLookup": {
+        "m": 0,
+        "people": 1,
+        "relatedTo": 2
+      }
+    },
+    {
+      "keys": [
+        "m",
+        "people",
+        "relatedTo"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1140,
+            "high": 0
+          },
+          "labels": [
+            "Movie"
+          ],
+          "properties": {
+            "tagline": "Everything is connected",
+            "title": "Cloud Atlas",
+            "released": {
+              "low": 2012,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        },
+        {
+          "identity": {
+            "low": 1041,
+            "high": 0
+          },
+          "labels": [
+            "Person"
+          ],
+          "properties": {
+            "born": {
+              "low": 1965,
+              "high": 0
+            },
+            "name": "Lana Wachowski"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1041"
+        },
+        {
+          "identity": {
+            "low": 3282,
+            "high": 0
+          },
+          "start": {
+            "low": 1041,
+            "high": 0
+          },
+          "end": {
+            "low": 1140,
+            "high": 0
+          },
+          "type": "DIRECTED",
+          "properties": {},
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3282",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1041",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        }
+      ],
+      "_fieldLookup": {
+        "m": 0,
+        "people": 1,
+        "relatedTo": 2
+      }
+    },
+    {
+      "keys": [
+        "m",
+        "people",
+        "relatedTo"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1140,
+            "high": 0
+          },
+          "labels": [
+            "Movie"
+          ],
+          "properties": {
+            "tagline": "Everything is connected",
+            "title": "Cloud Atlas",
+            "released": {
+              "low": 2012,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        },
+        {
+          "identity": {
+            "low": 1040,
+            "high": 0
+          },
+          "labels": [
+            "Person"
+          ],
+          "properties": {
+            "born": {
+              "low": 1967,
+              "high": 0
+            },
+            "name": "Lilly Wachowski"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1040"
+        },
+        {
+          "identity": {
+            "low": 3281,
+            "high": 0
+          },
+          "start": {
+            "low": 1040,
+            "high": 0
+          },
+          "end": {
+            "low": 1140,
+            "high": 0
+          },
+          "type": "DIRECTED",
+          "properties": {},
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3281",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1040",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        }
+      ],
+      "_fieldLookup": {
+        "m": 0,
+        "people": 1,
+        "relatedTo": 2
+      }
+    },
+    {
+      "keys": [
+        "m",
+        "people",
+        "relatedTo"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1140,
+            "high": 0
+          },
+          "labels": [
+            "Movie"
+          ],
+          "properties": {
+            "tagline": "Everything is connected",
+            "title": "Cloud Atlas",
+            "released": {
+              "low": 2012,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        },
+        {
+          "identity": {
+            "low": 1204,
+            "high": 0
+          },
+          "labels": [
+            "Person"
+          ],
+          "properties": {
+            "name": "Jessica Thompson"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1204"
+        },
+        {
+          "identity": {
+            "low": 3383,
+            "high": 0
+          },
+          "start": {
+            "low": 1204,
+            "high": 0
+          },
+          "end": {
+            "low": 1140,
+            "high": 0
+          },
+          "type": "REVIEWED",
+          "properties": {
+            "summary": "An amazing journey",
+            "rating": {
+              "low": 95,
+              "high": 0
+            }
+          },
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3383",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1204",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        }
+      ],
+      "_fieldLookup": {
+        "m": 0,
+        "people": 1,
+        "relatedTo": 2
+      }
+    },
+    {
+      "keys": [
+        "m",
+        "people",
+        "relatedTo"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1140,
+            "high": 0
+          },
+          "labels": [
+            "Movie"
+          ],
+          "properties": {
+            "tagline": "Everything is connected",
+            "title": "Cloud Atlas",
+            "released": {
+              "low": 2012,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        },
+        {
+          "identity": {
+            "low": 1144,
+            "high": 0
+          },
+          "labels": [
+            "Person"
+          ],
+          "properties": {
+            "born": {
+              "low": 1969,
+              "high": 0
+            },
+            "name": "David Mitchell"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1144"
+        },
+        {
+          "identity": {
+            "low": 3283,
+            "high": 0
+          },
+          "start": {
+            "low": 1144,
+            "high": 0
+          },
+          "end": {
+            "low": 1140,
+            "high": 0
+          },
+          "type": "WROTE",
+          "properties": {},
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3283",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1144",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        }
+      ],
+      "_fieldLookup": {
+        "m": 0,
+        "people": 1,
+        "relatedTo": 2
+      }
+    },
+    {
+      "keys": [
+        "m",
+        "people",
+        "relatedTo"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1140,
+            "high": 0
+          },
+          "labels": [
+            "Movie"
+          ],
+          "properties": {
+            "tagline": "Everything is connected",
+            "title": "Cloud Atlas",
+            "released": {
+              "low": 2012,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        },
+        {
+          "identity": {
+            "low": 1142,
+            "high": 0
+          },
+          "labels": [
+            "Person"
+          ],
+          "properties": {
+            "born": {
+              "low": 1949,
+              "high": 0
+            },
+            "name": "Jim Broadbent"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1142"
+        },
+        {
+          "identity": {
+            "low": 3279,
+            "high": 0
+          },
+          "start": {
+            "low": 1142,
+            "high": 0
+          },
+          "end": {
+            "low": 1140,
+            "high": 0
+          },
+          "type": "ACTED_IN",
+          "properties": {
+            "roles": [
+              "Vyvyan Ayrs",
+              "Captain Molyneux",
+              "Timothy Cavendish"
+            ]
+          },
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3279",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1142",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        }
+      ],
+      "_fieldLookup": {
+        "m": 0,
+        "people": 1,
+        "relatedTo": 2
+      }
+    },
+    {
+      "keys": [
+        "m",
+        "people",
+        "relatedTo"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1140,
+            "high": 0
+          },
+          "labels": [
+            "Movie"
+          ],
+          "properties": {
+            "tagline": "Everything is connected",
+            "title": "Cloud Atlas",
+            "released": {
+              "low": 2012,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        },
+        {
+          "identity": {
+            "low": 1145,
+            "high": 0
+          },
+          "labels": [
+            "Person"
+          ],
+          "properties": {
+            "born": {
+              "low": 1961,
+              "high": 0
+            },
+            "name": "Stefan Arndt"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1145"
+        },
+        {
+          "identity": {
+            "low": 3284,
+            "high": 0
+          },
+          "start": {
+            "low": 1145,
+            "high": 0
+          },
+          "end": {
+            "low": 1140,
+            "high": 0
+          },
+          "type": "PRODUCED",
+          "properties": {},
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3284",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1145",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        }
+      ],
+      "_fieldLookup": {
+        "m": 0,
+        "people": 1,
+        "relatedTo": 2
+      }
+    },
+    {
+      "keys": [
+        "m",
+        "people",
+        "relatedTo"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1140,
+            "high": 0
+          },
+          "labels": [
+            "Movie"
+          ],
+          "properties": {
+            "tagline": "Everything is connected",
+            "title": "Cloud Atlas",
+            "released": {
+              "low": 2012,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        },
+        {
+          "identity": {
+            "low": 1141,
+            "high": 0
+          },
+          "labels": [
+            "Person"
+          ],
+          "properties": {
+            "born": {
+              "low": 1966,
+              "high": 0
+            },
+            "name": "Halle Berry"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1141"
+        },
+        {
+          "identity": {
+            "low": 3278,
+            "high": 0
+          },
+          "start": {
+            "low": 1141,
+            "high": 0
+          },
+          "end": {
+            "low": 1140,
+            "high": 0
+          },
+          "type": "ACTED_IN",
+          "properties": {
+            "roles": [
+              "Luisa Rey",
+              "Jocasta Ayrs",
+              "Ovid",
+              "Meronym"
+            ]
+          },
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3278",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1141",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        }
+      ],
+      "_fieldLookup": {
+        "m": 0,
+        "people": 1,
+        "relatedTo": 2
+      }
+    },
+    {
+      "keys": [
+        "m",
+        "people",
+        "relatedTo"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1140,
+            "high": 0
+          },
+          "labels": [
+            "Movie"
+          ],
+          "properties": {
+            "tagline": "Everything is connected",
+            "title": "Cloud Atlas",
+            "released": {
+              "low": 2012,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        },
+        {
+          "identity": {
+            "low": 1106,
+            "high": 0
+          },
+          "labels": [
+            "Person"
+          ],
+          "properties": {
+            "born": {
+              "low": 1956,
+              "high": 0
+            },
+            "name": "Tom Hanks"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1106"
+        },
+        {
+          "identity": {
+            "low": 3276,
+            "high": 0
+          },
+          "start": {
+            "low": 1106,
+            "high": 0
+          },
+          "end": {
+            "low": 1140,
+            "high": 0
+          },
+          "type": "ACTED_IN",
+          "properties": {
+            "roles": [
+              "Zachry",
+              "Dr. Henry Goose",
+              "Isaac Sachs",
+              "Dermot Hoggins"
+            ]
+          },
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3276",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1106",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        }
+      ],
+      "_fieldLookup": {
+        "m": 0,
+        "people": 1,
+        "relatedTo": 2
+      }
+    },
+    {
+      "keys": [
+        "m",
+        "people",
+        "relatedTo"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1140,
+            "high": 0
+          },
+          "labels": [
+            "Movie"
+          ],
+          "properties": {
+            "tagline": "Everything is connected",
+            "title": "Cloud Atlas",
+            "released": {
+              "low": 2012,
+              "high": 0
+            }
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        },
+        {
+          "identity": {
+            "low": 1143,
+            "high": 0
+          },
+          "labels": [
+            "Person"
+          ],
+          "properties": {
+            "born": {
+              "low": 1965,
+              "high": 0
+            },
+            "name": "Tom Tykwer"
+          },
+          "elementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1143"
+        },
+        {
+          "identity": {
+            "low": 3280,
+            "high": 0
+          },
+          "start": {
+            "low": 1143,
+            "high": 0
+          },
+          "end": {
+            "low": 1140,
+            "high": 0
+          },
+          "type": "DIRECTED",
+          "properties": {},
+          "elementId": "5:ade3096f-c8db-476e-8449-df5df5582f9f:3280",
+          "startNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1143",
+          "endNodeElementId": "4:ade3096f-c8db-476e-8449-df5df5582f9f:1140"
+        }
+      ],
+      "_fieldLookup": {
+        "m": 0,
+        "people": 1,
+        "relatedTo": 2
+      }
+    }
+  ],
+  "summary": {
+    "query": {
+      "text": "MATCH (people:Person)-[relatedTo]-(m:Movie {title: \"Cloud Atlas\"}) RETURN *;",
+      "parameters": {}
+    },
+    "queryType": "r",
+    "counters": {
+      "_stats": {
+        "nodesCreated": 0,
+        "nodesDeleted": 0,
+        "relationshipsCreated": 0,
+        "relationshipsDeleted": 0,
+        "propertiesSet": 0,
+        "labelsAdded": 0,
+        "labelsRemoved": 0,
+        "indexesAdded": 0,
+        "indexesRemoved": 0,
+        "constraintsAdded": 0,
+        "constraintsRemoved": 0
+      },
+      "_systemUpdates": 0
+    },
+    "updateStatistics": {
+      "_stats": {
+        "nodesCreated": 0,
+        "nodesDeleted": 0,
+        "relationshipsCreated": 0,
+        "relationshipsDeleted": 0,
+        "propertiesSet": 0,
+        "labelsAdded": 0,
+        "labelsRemoved": 0,
+        "indexesAdded": 0,
+        "indexesRemoved": 0,
+        "constraintsAdded": 0,
+        "constraintsRemoved": 0
+      },
+      "_systemUpdates": 0
+    },
+    "plan": false,
+    "profile": false,
+    "notifications": [],
+    "gqlStatusObjects": [
+      {
+        "gqlStatus": "00000",
+        "statusDescription": "note: successful completion",
+        "diagnosticRecord": {
+          "OPERATION": "",
+          "OPERATION_CODE": "0",
+          "CURRENT_SCHEMA": "/"
+        },
+        "severity": "UNKNOWN",
+        "classification": "UNKNOWN",
+        "isNotification": false
+      }
+    ],
+    "server": {
+      "address": "neo4j:7687",
+      "agent": "Neo4j/5.8.0",
+      "protocolVersion": 5.2
+    },
+    "resultConsumedAfter": {
+      "low": 2,
+      "high": 0
+    },
+    "resultAvailableAfter": {
+      "low": 1,
+      "high": 0
+    },
+    "database": {
+      "name": "neo4j"
+    }
+  }
+}

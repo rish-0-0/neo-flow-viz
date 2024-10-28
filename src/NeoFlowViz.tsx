@@ -15,7 +15,7 @@ import {
   Edge,
 } from "@xyflow/react";
 import JSONPretty from "react-json-pretty";
-import { reactFlowEdges, reactFlowNodes } from "./utils";
+import { parseNeo4jResult } from "./utils";
 import CircularNode from "./CircularNode";
 import {DEFAULT_NODE_WIDTH, DEFAULT_NODE_HEIGHT} from "./const";
 import '@xyflow/react/dist/style.css';
@@ -42,6 +42,10 @@ export interface Neo4jNode {
   labels: string[];
   properties: JSONObject;
   elementId: string;
+  type?: string; // edges have types sometimes
+  startNodeElementId?: string;
+  endNodeElementId?: string;
+  segments?: {start: Neo4jNode;end:Neo4jNode;relationship:Neo4jNode;}[];
 }
 
 interface Record {
@@ -131,8 +135,8 @@ function Flow (
     showDetails = true
   }
   : NeoFlowVizProps) {
-  const initialNodes = React.useMemo(() => reactFlowNodes(response, query), [query]);
-  const initialEdges = React.useMemo(() => reactFlowEdges(response, query), [query]);
+  const {nodes: initialNodes, edges: initialEdges} = React
+    .useMemo(() => parseNeo4jResult(response, query), [query]);
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [selectedNode, setSelectedNode] = React.useState<Node | null>(null);
@@ -177,13 +181,13 @@ function Flow (
         },
       );
     },
-    [nodes, edges],
+    [nodes, edges, direction],
   );
 
   // Calculate the initial layout on mount.
   React.useLayoutEffect(() => {
     onLayout({ direction, useInitialNodes: true });
-  }, []);
+  }, [direction]);
 
   return (
     <div style={{ width: '100vw', height: '100vh' }}>

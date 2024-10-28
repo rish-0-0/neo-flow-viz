@@ -1,0 +1,28 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Neo4j Raw",
+    "collectionId": "778cabdc-b850-4570-b251-ef42dae8463c",
+    "dateExported": "2024-10-28T08:22:07.966Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1937648f-802c-48a4-b9ff-68954b043e23",
+            "colId": "778cabdc-b850-4570-b251-ef42dae8463c",
+            "containerId": "",
+            "name": "Make Neo4J Request",
+            "url": "http://localhost:3000",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-10-28T08:21:03.414Z",
+            "modified": "2024-10-28T08:21:03.414Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"query\": \"MATCH (cust:Customer)-[:PURCHASED]->(o1:Order)-[o:ORDERS]->(p:Product),(p)-[:PART_OF]->(c:Category {categoryName:\\\"Produce\\\"})RETURN * LIMIT 1;\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "kitPRGKeiWdME9VeIhyEKD7MBdWkjqb-AkYYJmUD-stTG_kqJ23GRKgap6mT--87ZNyFdMR7WH5s6rduUswJdA"
+}

@@ -9,7 +9,8 @@
     "test": "cd test/storybook && npm run storybook",
     "build-storybook": "cd test/storybook && npm run build-storybook",
     "npm-install-storybook": "cd test/storybook && npm install",
-    "prepublish": "tsc"
+    "prepublish": "tsc",
+    "neo4j-server": "cd test/neo4j-server && docker compose up -d"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,25 @@
+import { Meta, Source } from '@storybook/blocks';
+import * as NeoFlowVizStories from './NeoFlowViz.stories.ts';
+ 
+<Meta of={NeoFlowVizStories} />
+
+<h1>Code Examples</h1><br/>
+
+<h2>Getting Started</h2>
+<Source dark of={NeoFlowVizStories.Basic} />
+
+<h2>Complete Example</h2>
+<Source dark code={`
+  <NeoFlowViz
+    query={query} // CYPHER Query
+    response={response} // NodeJS style Neo4j Raw Response (checkout neo4j-server directory for an example)
+    width={1500} // width
+    height={800} // height
+    colorMode="system" // dark, light, system
+    direction="DOWN" // direction of ELKJS based layout
+    onNodeClick={(event, node) => console.log({node})} // callback
+    onEdgeClick={(event, edge) => console.log({edge})} // callback
+    showDetails={true} // shows the panel with the properties on the right side
+  />
+`} />
+

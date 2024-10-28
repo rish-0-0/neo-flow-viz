@@ -66,70 +66,111 @@ function retrieveLabel(resourceMap: {[key: string]: string}, index: number, _fie
   return resourceMap[key] ?? "";
 }
 
-export function reactFlowNodes(response: Neo4jResponse, query: string): any[] {
-  const resourceMap = getResourceMappingFromQuery(query);
-  console.log("resourceMap", resourceMap);
-  const uniqueNodes = new Map(); // To store unique nodes based on ID
+function isPathQuery(query: string): boolean {
+  // List of keywords indicating a path-related query
+  const pathKeywords = ['shortestPath', 'allShortestPaths', 'dijkstra', 'CALL'];
 
-  response.records.forEach(record => {
-    record._fields.forEach((node: Neo4jNode, index) => {
-      if (node.start && node.end) return; // only nodes
-      const _fieldLookup = record._fieldLookup;
-      const label = retrieveLabel(resourceMap, index, _fieldLookup);
-      const nodeId = hashString(`${node.identity.low}:${node.identity.high}`); // Unique ID
+  // Regular expression to match variable-length patterns
+  const variableLengthPattern = /\(\w+\)-\[\*\d*\.\.\d*\]-\(\w+\)/;
 
-      // Check if the nodeId is already present to avoid duplication
-      if (!uniqueNodes.has(nodeId)) {
-        uniqueNodes.set(nodeId, {
-          id: nodeId,
-          type: 'circularNode',
-          data: {
-            label,
-            properties: node.properties,
-          },
-          position: { x: 0, y: 0 }, // Default position; ELKJS can update it later
-        });
-      }
-    });
-  });
-
-  // Return the unique nodes as an array
-  return Array.from(uniqueNodes.values());
+  // Check for keywords and regex match
+  return pathKeywords.some(keyword => query.includes(keyword))
+    || variableLengthPattern.test(query);
 }
 
-export function reactFlowEdges(response: Neo4jResponse, query: string): any[] {
+export function parseNeo4jResult(response: Neo4jResponse, query: string) {
   const resourceMap = getResourceMappingFromQuery(query);
-  const uniqueEdges = new Map(); // Store edges based on unique ID
+  const uniqueNodes = new Map();
+  const uniqueEdges = new Map();
 
   response.records.forEach(record => {
-    record._fields.forEach((node, index) => {
-      if (!node.start || !node.end) return; // only relationships
+    record._fields.forEach((element, index) => {
       const _fieldLookup = record._fieldLookup;
       const label = retrieveLabel(resourceMap, index, _fieldLookup);
-      const edgeId = `edge-${hashString(`${node.start.low}:${node.start.high}`)}-to-${hashString(`${node.end.low}:${node.end.high}`)}`;
 
-      // Add edge only if it doesn't already exist
-      if (!uniqueEdges.has(edgeId)) {
-        uniqueEdges.set(edgeId, {
-          id: edgeId,
-          source: `${hashString(`${node.start.low}:${node.start.high}`)}`,
-          target: `${hashString(`${node.end.low}:${node.end.high}`)}`,
-          label,
-          data: {
-            label,
-            properties: node.properties,
-          },
-          markerEnd: {
-            type: MarkerType.ArrowClosed
+      // Check if the query response includes segments (for path queries like shortestPath)
+      if (isPathQuery(query) && element.segments) {
+        element.segments.forEach(segment => {
+          const { start, end, relationship } = segment;
+
+          const edgeId = relationship.elementId ?? `edge-${hashString(start.elementId)}-to-${hashString(end.elementId)}`;
+          if (!uniqueEdges.has(edgeId)) {
+            uniqueEdges.set(edgeId, {
+              id: edgeId,
+              source: start.elementId ?? `${hashString(`${start.identity.low}:${start.identity.high}`)}`,
+              target: end.elementId ?? `${hashString(`${end.identity.low}:${end.identity.high}`)}`,
+              label: (label === 'UnknownType' || !label) ? (relationship.type ?? label) : label,
+              data: {
+                label,
+                properties: relationship.properties,
+              },
+              markerEnd: {
+                type: MarkerType.ArrowClosed,
+              },
+            });
           }
+
+          // Handle nodes in segments (start and end nodes)
+          [start, end].forEach(node => {
+            const nodeId = node.elementId ?? hashString(`${node.identity.low}:${node.identity.high}`);
+            if (!uniqueNodes.has(nodeId)) {
+              uniqueNodes.set(nodeId, {
+                id: nodeId,
+                type: 'circularNode',
+                data: {
+                  label: node.labels.join('-'),
+                  properties: node.properties,
+                },
+                position: { x: 0, y: 0 },
+              });
+            }
+          });
         });
+      } else if (element.start && element.end) {
+        // Handle regular relationships
+        const edgeId = element.elementId ?? `edge-${hashString(`${element.start.low}:${element.start.high}`)}-to-${hashString(`${element.end.low}:${element.end.high}`)}`;
+        
+        if (!uniqueEdges.has(edgeId)) {
+          uniqueEdges.set(edgeId, {
+            id: edgeId,
+            source: element.startNodeElementId ?? `${hashString(`${element.start.low}:${element.start.high}`)}`,
+            target: element.endNodeElementId ?? `${hashString(`${element.end.low}:${element.end.high}`)}`,
+            label: label === 'UnknownType' ? (element.type ?? label) : label,
+            data: {
+              label,
+              properties: element.properties,
+            },
+            markerEnd: {
+              type: MarkerType.ArrowClosed,
+            },
+          });
+        }
+      } else {
+        // Handle nodes
+        const nodeId = element.elementId ?? hashString(`${element.identity.low}:${element.identity.high}`);
+        
+        if (!uniqueNodes.has(nodeId)) {
+          uniqueNodes.set(nodeId, {
+            id: nodeId,
+            type: 'circularNode',
+            data: {
+              label: label === 'UnknownType' ? (element.labels.join('-') ?? label) : label,
+              properties: element.properties,
+            },
+            position: { x: 0, y: 0 },
+          });
+        }
       }
     });
   });
 
-  // Return unique edges as an array
-  return Array.from(uniqueEdges.values());
+  // Return combined output
+  return {
+    nodes: Array.from(uniqueNodes.values()),
+    edges: Array.from(uniqueEdges.values()),
+  };
 }
+
 
 function fnv1aHash(label: string): number {
   let hash = 2166136261; // prime
