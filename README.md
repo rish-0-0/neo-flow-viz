@@ -3,7 +3,6 @@ React Flow based Neo4j Vizualization Library written in TypeScript
 
 [Storybook](https://rish-0-0.github.io/neo-flow-viz/)
 
-> Coming Soon!
 ```shell
 npm install neo-flow-viz
 ```
