@@ -1,10 +1,9 @@
 import { MarkerType } from "@xyflow/react";
 import { Neo4jNode, Neo4jResponse } from "./NeoFlowViz";
 
-// Regex to match only nodes with defined variable names and optional types
-export const nodeRegex = /\((\w+):?(\w+)?(?:\s*\{[^\}]*\})?\)/g;
-// Regex to match only relationships with defined variable names and optional types
-export const relationshipRegex = /\[(\w+):?(\w+)?(?:\s*\{[^\}]*\})?\]/g;
+// Regex for nodes and relationships
+export const nodeRegex = /\((\w+)?(:\w+)?(?:\s*\{[^\}]*\})?\)/g;
+export const relationshipRegex = /\[(\w+)?(:[^\]]+)?(?:\s*\{[^\}]*\})?\]/g;
 
 function getResourceMappingFromQuery(query: string): { [key: string]: string } {
   let match: RegExpExecArray | null;
